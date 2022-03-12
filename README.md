@@ -1,5 +1,40 @@
 # Vegova - delavnica Linux + Minecraft
 
+## Virtualka
+
+## Osnovni Linux ukazi
+
+### Drevesna struktura datotek
+
+### Ukaz: pwd
+
+### Ukaz: ls
+
+### Ukaz: cd
+
+### Ukaz: touch
+
+### Ukaz: tree
+
+### Ukaz: wget
+
+## Datoteke in pravice
+
+### Ukaz: nano
+
+### Pravice dostopa do datotek
+
+### Ukaz: chown
+
+### Ukaz: chmod
+
+## Namestitev Jave
+
+
+## Namestitev Minecraft strežnika
+
+### Konfiguracija strežnika kot storitve: systemd
+
 ## Firewall
 
 Dokumentacija:
