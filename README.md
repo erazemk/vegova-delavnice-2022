@@ -78,13 +78,57 @@ Le-ta lahko prikaže navodila (skoraj) vsakega programa, ki je nameščen na sis
 
 Za začetek lahko pogledamo navodila za uporabo kar `man` programa samega, in sicer z ukazom `man man`.
 
-**TODO: Napiši kaj o poglavjih**
+Poglavja:
+
+- *name* - ime ukaza z enovrstičnim opisom
+- *synopsis* - formalni zapis kako pognazi ukaz, katere parametre lahko podamo
+- *description* - opis ukaza
+- *options* - parametri, ki jih lahko podamo ukazu
+- *exit status* - pomeni posameznih izhodnih vrednosti (0 = OK, kar je različno od 0 pomeni, da je prišlo do napake)
+- *return value* - če dokumentacija opisuje metodo knjižnice, je tu opisana vrednost, ki jo metoda vrne
+- *errors* - opisuje napake, ki so lahko vrnjene preko spremenljivke *errno*
+- *environment* - opis okoljskih spremenljivk, ki vplivajo na delovanje programa
+- *files* - datoteke in mape, kjer se program in konfiguracijske datoteke nahajajo
+- *versions* - različice 
+- *notes* - dodatni zapiski
+- *bugs* - znani hrošči
+- *examples* - pogosti primeri uporabe
+- *authors* - avtorji programa
+- *see also* - povezave do dokumentacij drugih programov
+
+Primeri ukazov:
+
+``` bash
+# Izpis doumentacije za ukaz printf
+man printf
+
+# Izpis določenega poglavja dokumentacije
+man 2 intro
+
+# Izpis vseh dokumentacij, ki so na voljo za ukaz
+man -a intro
+
+# Iskanje ključne besede po vseh dokumentacijah
+man -k cd
+
+# Izpis lokacije, kjer se nahaja dokumentacija
+man -w ls
+
+# Prikaz dokumentacije s tem, da pri imenu upošteva velikost črk
+man -I printf
+
+```
 
 ![man man](https://user-images.githubusercontent.com/46302511/159133118-7cbe39ee-5e4f-449a-a303-0b500819a214.png)
 
 Za izhod iz programa pritisnemo na tipko **q** (piše tudi levo spodaj).
 
 Če ne vemo točno kateri program želimo, lahko uporabimo argument za iskanje: `-k` (npr. `man -k git`)
+
+Dodatna dokumentacija:
+
+- [Primeri](https://www.geeksforgeeks.org/man-command-in-linux-with-examples/)
+- [Primeri](https://www.howtogeek.com/663440/how-to-use-linuxs-man-command-hidden-secrets-and-basics/)
 
 ### Drevesna struktura datotek
 
