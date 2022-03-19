@@ -194,6 +194,21 @@ Primer le nekaterih:
 - `-h` oz. `--human-readable`: izpiše velikosti datotek na lepši način (npr. 1K, 2G, ...)
 - `-a` oz. `--all`: izpiši tudi skrite datoteke (te, ki se začnejo s `.`)
 
+``` bash
+# Izpis vsebine mape v kateri se trenutno nahajamo
+ls
+
+# Izpis vseh datotek z dodatnimi informacijimi napisanimi na lepši način
+ls -lah
+
+# Izpis druge mape
+ls /etc
+```
+
+Dokumentacija:
+
+- [Dokumentacija ukaza](https://man7.org/linux/man-pages/man1/ls.1.html)
+
 ### Ukaz: `cd`
 
 `cd` (change directory) se uporablja za premik med direktoriji, tako kot se v grafičnem vmesniku premaknemo v mapo z dvojnim klikom.
