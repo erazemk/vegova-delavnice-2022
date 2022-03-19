@@ -317,7 +317,18 @@ ExecStop=/usr/bin/screen -S minecraft -p 0 -X stuff "`printf \"stop\r\"`"
 WantedBy=multi-user.target
 ```
 
-Server zaženemo s `sudo systemctl start minecraft`, ustavimo pa z ukazom `sudo systemctl stop minecraft`
+S strežnikom upravljamo s sledečimi ukazi:
+
+``` bash
+# Omogočimo zagon strežnika ob vklopu naprave (naredimo ob namestitvi)
+sudo systemctl enable minecraft
+
+# Zaženemo Minecraft strežnik
+sudo systemctl start minecraft
+
+# Ustavimo Minecraft strežnik
+sudo systemctl stop minecraft
+```
 
 Če se želimo povezati na serverjevo konzolo zaženemo ukaz `screen -r minecraft`.
 Ker ne želimo ustaviti serverja lahko iz konzole odidemo z ukazom: `Ctrl-a` + `d`.
