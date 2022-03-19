@@ -173,6 +173,16 @@ Najpomembnejši direktoriji so `/`, `/bin`, `/boot`, `/dev`, `/etc`, `/home`, `/
 `pwd` (print working directory) je program, za izpis poti trenutnega direktorija.
 Večina lupin podpira uporabo spremenljivke `$PWD`, ki vrne isto pot, a brez izvajanja zunanjega programa.
 
+``` bash
+# Primer: Poženemo ukaz pwd
+student@stroj:~/delavnice2022$ pwd
+/home/student/delavnice2022
+
+# Primer: Izpišemo vsebino okoljske spremenljivke PWD
+student@stroj:~/delavnice2022$ echo $PWD
+/home/student/delavnice2022
+```
+
 ### Ukaz: `ls`
 
 `ls` (list directory contents) je program za izpis datotek v trenutnem ali želenem direktoriju.
