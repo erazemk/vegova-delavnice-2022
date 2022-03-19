@@ -211,7 +211,46 @@ Dokumentacija:
 
 ### Ukaz: `cd`
 
-`cd` (change directory) se uporablja za premik med direktoriji, tako kot se v grafičnem vmesniku premaknemo v mapo z dvojnim klikom.
+`cd` (change directory) se uporablja za premik med mapami, tako kot se v grafičnem vmesniku premaknemo v mapo z dvojnim klikom.
+
+Posebne okrajšave poti:
+
+- `-` - prejšna mapa v kateri smo bili
+- `..` - nadrejena mapa (ena mapa višje v drevesu)
+- `--` - mapa v kateri smo uporabili ukaz `cd -`
+- `~` - domača mapa uporabnika (ponavadi `/home/uporabnik`)
+- `.` - trenutna mapa
+
+Pri ukazu lahko podamo dva tipa poti:
+
+- **relativno** - Pot podamo od trenutne mape (kot če bi namesto `.` dodali pot, ki jo izpiše ukaz `pwd`) npr. `cd ./podmapaTrenutneMape`.
+- **absolutno** - Podamo celotno pod od korenskega direktorija (`/`) npr. `/home/uporabnik`.
+
+V kolikor ne vemo celotne poti, si lahko pomagamo s *tabulatorjem*, ki nam  bo pokazal možnosti za dokončanje poti.
+
+
+Primeri:
+
+``` bash
+# Premik v korensko mapo
+cd /
+
+# Premik v domačo mapo trenutnega uporabnika
+cd ~
+
+# Premik eno mapo višje
+cd ..
+
+# Premik v sosednjo mapo
+cd ../sosednjaMapa
+```
+
+Ker je ukaz ugrajen v samo lupino, se do njegove dokumentacije pride z ukazom `man builtins`.
+
+Dokumentacija:
+
+- [Dokumentacija ukaza](https://man7.org/linux/man-pages/man1/cd.1p.html)
+- [Primeri uporabe ukaza](https://www.tecmint.com/cd-command-in-linux/)
 
 ### Ukaz: `touch`
 
