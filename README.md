@@ -4,6 +4,8 @@
 
 - OS: [Ubuntu Server 20.04 (OVA format)](https://drive.google.com/file/d/1uXuYXMLVn9_eMHHl0PMdLa4Gml0fesxc/view?usp=sharing)
 
+**TODO: Slike za namestitev (+omrežna nastavitev virtualk, da bodo lahko dostopali do njih potem)**
+
 ## Ukazna lupina
 
 **Ukazna lupina** oz. *shell* je program, ki uporabniku omogoča osnovno delo, ki je lahko interaktivno ali neinteraktivno.
@@ -256,31 +258,53 @@ Dokumentacija:
 
 `touch` se uporablja za ustvarjanje praznih datotek, tako kot lahko v grafičnem vmesniku z desnim klikom ustvarimo novo datoteko.
 
+**TODO: Primer touch in ls, ki pokaže, da je bila datoteka ustvarjena**
+
 ### Ukaz: `tree`
 
 `tree` se uporablja kot alternativa programa `ls`, saj tudi izpiše seznam datotek, a na hierarhičen način z zamaknjenimi vrsticami glede na globino direktorija.
 
+**TODO: Primer z izpisom + primer, ki gre zgolj do določenega nivoja**
+
 ### Ukaz: `cat`
+
+**TODO: Opis + primer**
 
 ### Ukaz: `grep`
 
+**TODO: Opis + primer uporabe z ustalimi ukazi**
+
 ### Ukaz: `sudo`
+
+**TODO: Opis + primer**
 
 ### Ukaz: `wget`
 
+**TODO: Opis + primer**
+
 ### Ukaz: `apt`
+
+**TODO: Opis + primer (cache search, install, remove, purge, update, upgrade)**
 
 ### Okoljske spremenljivke
 
+**TODO: Opis in seznam pogosto uporabljenih okoljski spremenljiv, primer definicije svojih**
+
 ## Datoteke in pravice
+
+**TODO: Opis (user,group, others), pravice (r,w,x)**
 
 ### Ukaz: `nano`
 
-### Pravice dostopa do datotek
+**TODO: Opis (z uporabnimi bljižnicami) + primer**
 
 ### Ukaz: `chown`
 
+**TODO: Opis + primer + /etc/passwd,/etc/shadow,/etc/group**
+
 ### Ukaz: `chmod`
+
+**TODO: Opis + primer**
 
 ## Namestitev Minecraft strežnika
 
