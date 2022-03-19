@@ -71,6 +71,22 @@ Ostale pomembne tipke:
 |:-------------------------------------:|
 | ![GNOME Terminal - ukazna vrstica](https://user-images.githubusercontent.com/46302511/159132155-d3ec4bd6-f8f1-46fc-bdcd-e83c7724199b.png) |
 
+### Ukaz: `echo`
+
+Z ukazom `echo` izpišemo podane parametre na zaslon. Z stikali lahko spremenimo stil izpisa.
+
+``` bash
+# Primer izpisa besedila
+echo "Besedilo"
+
+# Primer izpisa brez končnega prehoda v novo vrstico
+echo -n "Brez nove vrstice"
+```
+
+Dokumentacija:
+
+- [Dokumentacija za ukaz](https://linux.die.net/man/1/echo)
+
 ### Ukaz: `man`
 
 Eden izmed bolj uporabnih programov, ki pride privzeto na vseh Linux distribucijah je `man`, kar je okrajšava za **manual** oz. navodila.
