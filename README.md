@@ -2,9 +2,54 @@
 
 ## Virtualka
 
-## Osnovni Linux ukazi
+## Ukazna lupina
+
+**Ukazna lupina** oz. *shell* je program, ki uporabniku omogoča osnovno delo, ki je lahko interaktivno ali neinteraktivno.
+
+Poznamo 2 vrsti lupin:
+
+- **ukazne lupine** - delo preko ukazne vrstice
+  - *sh* - Bourneova lupina (ena prvih, 1977)
+  - *csh* - C lupiona
+  - ksh - Kornova lupina (v začetku 1980')
+  - bash - Bourne-again lupina (1986)
+  - command.com - DOS lupna
+  - cmd.exe - Windows lupina
+  - powershell - Nova Windows Lupina (temelji na .NET)
+- **grafične lupine** - delo preko grafičnega uporabniškega vmesnika (GUI)
+  - progman.exe (Windows 3.x)
+  - explorer.exe (Windows NT itd.)
+  - GNOME (GNU Network Object Model Environment)
+  - KDE (K Desktop Environment)
+
+TODO: Dodaj slike
+
+### Ukazna vrstica
+
+U ukazno vrstico izvajamo ukaze.
+
+Ukazna vrstica se začne s **pozivnikom (prompt)**  `student@stroj:~>`, kjer `student` predstavlja ime uporabnika (ki je odprl lupino), `stroj` predstavlja ime naprave, `~` pa predstavlja pot, kjer se trenutno nahajamo.
+
+TODO: Slika
+
+Ukazne vrstice lahko avtomatično dopolnjujemo s pomočjo pritiskom tipke *Tab*.
+
+Ukazna lupina shranjuje zgodovino izvedenih ukaznih vrstic:
+
+- Po zgodovini se premikamo s tipkama *gor*/*dol*.
+- Po zgodovini lahko iščemo s *Ctrl+R*.
+- Uporabimo ukaz *histor* (npr. z `history -c` pobrišemo zgodovino ukazov).
+
+
+Ostale pomembne tipke:
+
+- *Ctrl+C* - ukinitev izvajanja ukaza
+- *Ctrl+Z* - zaustavitev izvajanja ukaza
+- *Ctrl+D* - konec vnosa podatkov
 
 ### Drevesna struktura datotek
+
+### Ukaz: man
 
 ### Ukaz: pwd
 
@@ -17,6 +62,9 @@
 ### Ukaz: tree
 
 ### Ukaz: wget
+
+### Okoljske spremenljivke
+
 
 ## Datoteke in pravice
 
