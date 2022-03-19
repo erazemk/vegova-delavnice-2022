@@ -180,6 +180,10 @@ Primer le nekaterih:
 
 `tree` se uporablja kot alternativa programa `ls`, saj tudi izpiše seznam datotek, a na hierarhičen način z zamaknjenimi vrsticami glede na globino direktorija.
 
+### Ukaz: `cat`
+
+### Ukaz: `grep`
+
 ### Ukaz: `sudo`
 
 ### Ukaz: `wget`
