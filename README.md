@@ -311,7 +311,14 @@ Dokumentacija:
 
 ### Ukaz: `cat`
 
-**TODO: Opis + primer**
+Ukaz `cat` (concatenate) se uporablja za združitev vsebine datotek in izpis na standardni izhod.
+
+Primeri;
+
+``` bash
+# Izpis vsebine datoteke
+cat datoteka.txt
+```
 
 ### Ukaz: `grep`
 
