@@ -364,9 +364,27 @@ Dokumentacija:
 
 - [Dokumentacija](https://linux.die.net/man/1/grep)
 
+### Ukaz: `nano`
+
+**TODO: Opis (z uporabnimi bljižnicami) + primer**
+
 ### Ukaz: `sudo`
 
-**TODO: Opis + primer**
+Z uporabo ukaza `sudo` lahko določen ukaz izvedemo kot, če bi ga izvedel drugi uporabnik ali pa superuser (root).
+
+Primeri:
+
+``` bash
+# Poženemo ukaz kot administrator
+sudo cat datoteka.txt
+
+# Poženemo ukaz kot drug uporabnik
+sudo -u user2 -g usergroup2 cat datoteka.txt
+```
+
+Dokumentacija:
+
+- [Dokumentacija](https://linux.die.net/man/8/sudo)
 
 ### Ukaz: `wget`
 
@@ -384,9 +402,9 @@ Dokumentacija:
 
 **TODO: Opis (user,group, others), pravice (r,w,x)**
 
-### Ukaz: `nano`
+### Ukaz: `whoami`
 
-**TODO: Opis (z uporabnimi bljižnicami) + primer**
+**TODO: Opis + primer**
 
 ### Ukaz: `chown`
 
