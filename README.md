@@ -258,13 +258,56 @@ Dokumentacija:
 
 `touch` se uporablja za ustvarjanje praznih datotek, tako kot lahko v grafičnem vmesniku z desnim klikom ustvarimo novo datoteko.
 
-**TODO: Primer touch in ls, ki pokaže, da je bila datoteka ustvarjena**
+Primeri:
+
+``` bash
+# Ustvarimo datoteko
+touch datoteka1
+```
+
+Dokumentacija:
+
+- [Dokumentacija](https://man7.org/linux/man-pages/man1/touch.1.html)
 
 ### Ukaz: `tree`
 
 `tree` se uporablja kot alternativa programa `ls`, saj tudi izpiše seznam datotek, a na hierarhičen način z zamaknjenimi vrsticami glede na globino direktorija.
 
-**TODO: Primer z izpisom + primer, ki gre zgolj do določenega nivoja**
+Primeri:
+
+``` bash
+# Preprost izpis
+tree mapa
+
+# Izpis tudi skritih datotek/map
+tree -a mapa
+
+# Izpis zgolj map
+tree -d mapa
+
+# Izpis celotne (relativne) poti do datotek
+tree -f mapa
+
+# Izpis brez zamikov in drevesne strukture
+tree -i mapa
+
+# Izpis datotek in map, ki ustrezajo vzorcu
+tree -P vzorec mapa
+
+# Izpis pravic poleg imen datotek in map
+tree -p mapa
+
+# Izpis z velikostjo datotek
+tree -s mapa
+tree -h mapa # Bolj pregleden izpis
+
+# Izpis do določene globine
+tree -L globina mapa
+```
+
+Dokumentacija:
+
+- [Dokumentacija 1](https://linux.die.net/man/1/tree)
 
 ### Ukaz: `cat`
 
