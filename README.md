@@ -462,17 +462,48 @@ echo $ime
 
 **TODO: Opis (user,group, others), pravice (r,w,x)**
 
-### Ukaz: `whoami`
+### Ukaz: `whoami` ([dokumentacija](https://linux.die.net/man/1/whoami))
 
-**TODO: Opis + primer**
+Ukaz `whoami` uporabimo za izpis uporabniškega imena trenutnega uporabnika.
 
-### Ukaz: `chown`
+Primer:
+```bash
+whoami
+> vegovec
+```
 
-**TODO: Opis + primer + /etc/passwd,/etc/shadow,/etc/group**
+### Ukaz: `chown` ([dokumentacija](https://linux.die.net/man/1/chown))
 
-### Ukaz: `chmod`
+Ukaz `chown` se uporablja za spreminjanje lastništva datoteke ali direktorija.
+Spremenimo lahko tako lastnika kot tudi skupino.
 
-**TODO: Opis + primer**
+Primeri:
+```bash
+# Dodeljevanje lastništva datoteke imedatoteke uporabniku in skupini vegovec
+chown vegovec:vegovec imedatoteke
+
+# Dodeljevanje lastništva direktorija in vseh poddirektorijev
+chown -R vegovec:vegovec direktorij
+```
+
+**TODO: /etc/passwd,/etc/shadow,/etc/group**
+
+### Ukaz: `chmod` ([dokumentacija](https://linux.die.net/man/1/chmod))
+
+Ukaz `chmod` se uporablja za spreminjanje pravic dostopa do datoteke ali direktorija.
+
+```bash
+# Nastavi pravice branja in pisanja datoteke lastniku in skupini, a samo branja ostalim
+chmod 644 imedatoteke
+
+# Nastavi pravice izvajanja, branja in pisanja lastniku in skupini, a samo branja in izvajanja ostalim
+chmod 755 imedatoteke
+
+# Nastavi pravice na direktoriju in vseh poddirektorijih
+chmod -R 755 mapa # <-- PAZI! - če direktorij nima pravice izvajanja, ga ne moremo odpreti
+```
+
+Privzeto imajo direktoriji pravice `755`, datoteke pa `644`.
 
 ## Namestitev Minecraft strežnika
 
@@ -525,7 +556,7 @@ sudo systemctl stop minecraft
 Če se želimo povezati na serverjevo konzolo zaženemo ukaz `screen -r minecraft`.
 Ker ne želimo ustaviti serverja lahko iz konzole odidemo z ukazom: `Ctrl-a` + `d`.
 
-## Firewall ([dokumentacija](https://help.ubuntu.com/community/UFW))
+## Požarni zid `ufw` ([dokumentacija](https://help.ubuntu.com/community/UFW))
 
 Privzeto ob namestitvi Ubuntu serverja ni nameščenega požarnega zidu, za to ga moramo namestiti sami.
 
