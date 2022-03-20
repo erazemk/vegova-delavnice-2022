@@ -410,7 +410,27 @@ Dokumentacija:
 
 ### Ukaz: `wget`
 
-**TODO: Opis + primer**
+Z ukazom `wget` lahko prenesemo datoteko iz spletnega ali FTP strežnika.
+
+Primeri:
+
+``` bash
+# Prenos datoteke s spletnega strežnika
+wget https://example.org/File.txt
+
+# Prenos, kjer določimo ime ciljne datoteke
+wget -O File.txt https://example.org/File.txt
+
+# Izpis statusa prenosa
+wget --progress=bar https://example.org/File.txt
+
+# Timeout
+wget --connect-timeout=10 https://example.org/File.txt
+```
+
+Dokumentacija:
+
+- [Dokumentacija](https://linux.die.net/man/1/wget)
 
 ### Ukaz: `apt`
 
