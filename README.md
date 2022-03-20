@@ -318,11 +318,51 @@ Primeri;
 ``` bash
 # Izpis vsebine datoteke
 cat datoteka.txt
+
+# Izpis datoteke v obratnem vrstnem redu vrstic
+tac datoteka.txt
 ```
+
+Dokumentacija:
+
+- [Dokumentacija cat](https://man7.org/linux/man-pages/man1/cat.1.html)
+- [Dokumentacija tac](https://man7.org/linux/man-pages/man1/tac.1.html)
 
 ### Ukaz: `grep`
 
-**TODO: Opis + primer uporabe z ustalimi ukazi**
+Z ukazom `grep` izpišemo vrstice v datoteki, ki se ujemajo v našem vzorcu. Velikokrat ga uporabimo v kombinaciji z drugimi ukazi, kjer iščemo po standardnem vhodu namesto po datoteki.
+
+Operatorji za ponovitev, ki se uporabljajo pri definiciji vzorca:
+
+- `?` - predhodni element je opcijski in se ponovi največ enkrat
+- `*` - predhodni element se lahko pojavi mnogokrat, lahko tudi ničkrat
+- `+` - predhodni element se pojavi vsaj enkrat
+- `{n}` - predhodni element se pojavi natanko n-krat
+- `{n,}` - predhodni element se pojavi vsaj n-krat
+- `{,m}` - predhodni element se pojavi največ m-krat
+- `{n,m}` - predhodni element se pojavi vsaj n-krat in ne več kot m-krat
+
+Definicije množice znakov:
+
+- `[abcd]` - množica, ki vsebuje znake a, b, c in d
+- `[a-z]` - množica, ki vsebuje znake "od a do z"
+
+Primeri:
+
+``` bash
+# Iskanje vrstic v datoteki, ki vsebujejo ključno besedo
+grep KljucnaBeseda datoteka.txt
+
+# Kombinacija z ukazom cat
+cat datoteka.txt | grep KljucnaBeseda
+
+# Iskanje vzorca v datiteju
+grep -E vzore+c datoteka.txt
+```
+
+Dokumentacija:
+
+- [Dokumentacija](https://linux.die.net/man/1/grep)
 
 ### Ukaz: `sudo`
 
