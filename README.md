@@ -309,6 +309,32 @@ Dokumentacija:
 
 - [Dokumentacija 1](https://linux.die.net/man/1/tree)
 
+### Ukaz: `nano`
+
+Ukaz `nano` uporabimo, da uredimo vsebino tekstovne datoteke v terminalu.
+
+Bližnjice:
+
+- *CTRL+S* - Shrani trenutno datoteko
+- *CTRL+O* - Shrani kot
+- *CTRL-X* - Izhod
+- *CTRL+K* - Cut
+- *CTRL+U* - Paste
+- *ALT+U* - Undo
+- *ALT+E* - Redo
+
+Primeri:
+
+``` bash
+# Uredimo vsebino datoteke
+nano datoteka.txt
+```
+
+Dokumentacija:
+
+- [Dokumentacija](https://linux.die.net/man/1/nano)
+- [Bližnjice](https://www.nano-editor.org/dist/latest/cheatsheet.html)
+
 ### Ukaz: `cat`
 
 Ukaz `cat` (concatenate) se uporablja za združitev vsebine datotek in izpis na standardni izhod.
@@ -363,10 +389,6 @@ grep -E vzore+c datoteka.txt
 Dokumentacija:
 
 - [Dokumentacija](https://linux.die.net/man/1/grep)
-
-### Ukaz: `nano`
-
-**TODO: Opis (z uporabnimi bljižnicami) + primer**
 
 ### Ukaz: `sudo`
 
