@@ -2,9 +2,29 @@
 
 ## Virtualka
 
-- OS: [Ubuntu Server 20.04 (OVA format)](https://drive.google.com/file/d/1uXuYXMLVn9_eMHHl0PMdLa4Gml0fesxc/view?usp=sharing)
+Da si skrajšamo čas priprave je na voljo [Ubuntu Server 20.04](https://drive.google.com/file/d/1uXuYXMLVn9_eMHHl0PMdLa4Gml0fesxc/view?usp=sharing) VM slika, ki jo bomo uvozili v VirtualBox.
 
-**TODO: Slike za namestitev (+omrežna nastavitev virtualk, da bodo lahko dostopali do njih potem)**
+| 1. Odpri VirtualBox in pritisni na gumb **Import** |
+|:--------------------------------------------------:|
+| ![1. import appliance](https://user-images.githubusercontent.com/46302511/159177482-6b227359-f42c-4d56-9997-660c6caf7732.png) |
+| 2. Pritisni na gumb za izbiro datoteke |
+| ![2. open file selector](https://user-images.githubusercontent.com/46302511/159177541-c7562cfa-fb4a-4c95-a5b1-f83b0b78841b.png) |
+| 3. Izberi prenešeno datoteko |
+| ![3. select file](https://user-images.githubusercontent.com/46302511/159177561-a0bc37ee-7851-4f4b-901c-6db29e756c2d.png) |
+| 4. Pritisni **Next** |
+| ![4. press next](https://user-images.githubusercontent.com/46302511/159177613-d53d6d27-e549-4186-9ac0-0331652702bd.png)
+| 5. Pusti privzete nastavitve in pritisni **Import** |
+| ![5. import image](https://user-images.githubusercontent.com/46302511/159177702-aeeb66ee-b9e6-4d45-9653-6d7c66bfd51d.png) |
+| 6. Počakaj da se VM slika uvozi |
+| ![6. wait for import](https://user-images.githubusercontent.com/46302511/159177681-c19eb7f5-cfca-40a9-b5a1-29ede0abd907.png) |
+| 7. Zaženi VM s pritiskom na gumb **Start** |
+| ![7. start vm](https://user-images.githubusercontent.com/46302511/159177715-b69853b6-5c4f-47f6-9146-d084a9ed266d.png) |
+| 8. Počakaj dokler ne prideš do prijavnega zaslona |
+| ![8. wait till login screen](https://user-images.githubusercontent.com/46302511/159177727-a372e99a-7461-40fd-8fec-f2395b1f8c81.png) |
+
+**Informacije o VM**
+- Uporabniško ime: `vegovec`
+- Geslo: `vegovec`
 
 ## Ukazna lupina
 
@@ -73,7 +93,7 @@ Ostale pomembne tipke:
 |:-------------------------------------:|
 | ![GNOME Terminal - ukazna vrstica](https://user-images.githubusercontent.com/46302511/159132155-d3ec4bd6-f8f1-46fc-bdcd-e83c7724199b.png) |
 
-### Ukaz: `echo`
+### Ukaz: `echo` ([dokumentacija](https://linux.die.net/man/1/echo))
 
 Z ukazom `echo` izpišemo podane parametre na zaslon. Z stikali lahko spremenimo stil izpisa.
 
@@ -84,10 +104,6 @@ echo "Besedilo"
 # Primer izpisa brez končnega prehoda v novo vrstico
 echo -n "Brez nove vrstice"
 ```
-
-Dokumentacija:
-
-- [Dokumentacija za ukaz](https://linux.die.net/man/1/echo)
 
 ### Ukaz: `man`
 
@@ -144,7 +160,6 @@ Za izhod iz programa pritisnemo na tipko **q** (piše tudi levo spodaj).
 Če ne vemo točno kateri program želimo, lahko uporabimo argument za iskanje: `-k` (npr. `man -k git`)
 
 Dodatna dokumentacija:
-
 - [Primeri](https://www.geeksforgeeks.org/man-command-in-linux-with-examples/)
 - [Primeri](https://www.howtogeek.com/663440/how-to-use-linuxs-man-command-hidden-secrets-and-basics/)
 
@@ -185,7 +200,7 @@ student@stroj:~/delavnice2022$ echo $PWD
 /home/student/delavnice2022
 ```
 
-### Ukaz: `ls`
+### Ukaz: `ls` ([dokumentacija](https://man7.org/linux/man-pages/man1/ls.1.html))
 
 `ls` (list directory contents) je program za izpis datotek v trenutnem ali želenem direktoriju.
 Če ga zaženemo brez argumentov bo izpisal vsebino trenutnega direktorija, če pa mu na konec dodamo še ime nekega direktorija, pa bo izpisal vsebino le-tega.
@@ -207,11 +222,7 @@ ls -lah
 ls /etc
 ```
 
-Dokumentacija:
-
-- [Dokumentacija ukaza](https://man7.org/linux/man-pages/man1/ls.1.html)
-
-### Ukaz: `cd`
+### Ukaz: `cd` ([dokumentacija](https://man7.org/linux/man-pages/man1/cd.1p.html), [primeri uporabe](https://www.tecmint.com/cd-command-in-linux/))
 
 `cd` (change directory) se uporablja za premik med mapami, tako kot se v grafičnem vmesniku premaknemo v mapo z dvojnim klikom.
 
@@ -249,12 +260,7 @@ cd ../sosednjaMapa
 
 Ker je ukaz ugrajen v samo lupino, se do njegove dokumentacije pride z ukazom `man builtins`.
 
-Dokumentacija:
-
-- [Dokumentacija ukaza](https://man7.org/linux/man-pages/man1/cd.1p.html)
-- [Primeri uporabe ukaza](https://www.tecmint.com/cd-command-in-linux/)
-
-### Ukaz: `touch`
+### Ukaz: `touch` ([dokumentacija](https://man7.org/linux/man-pages/man1/touch.1.html))
 
 `touch` se uporablja za ustvarjanje praznih datotek, tako kot lahko v grafičnem vmesniku z desnim klikom ustvarimo novo datoteko.
 
@@ -265,11 +271,7 @@ Primeri:
 touch datoteka1
 ```
 
-Dokumentacija:
-
-- [Dokumentacija](https://man7.org/linux/man-pages/man1/touch.1.html)
-
-### Ukaz: `tree`
+### Ukaz: `tree` ([dokumentacija](https://linux.die.net/man/1/tree))
 
 `tree` se uporablja kot alternativa programa `ls`, saj tudi izpiše seznam datotek, a na hierarhičen način z zamaknjenimi vrsticami glede na globino direktorija.
 
@@ -305,11 +307,7 @@ tree -h mapa # Bolj pregleden izpis
 tree -L globina mapa
 ```
 
-Dokumentacija:
-
-- [Dokumentacija 1](https://linux.die.net/man/1/tree)
-
-### Ukaz: `nano`
+### Ukaz: `nano` ([dokumentacija](https://linux.die.net/man/1/nano), [bližnjice](https://www.nano-editor.org/dist/latest/cheatsheet.html))
 
 Ukaz `nano` uporabimo, da uredimo vsebino tekstovne datoteke v terminalu.
 
@@ -330,12 +328,7 @@ Primeri:
 nano datoteka.txt
 ```
 
-Dokumentacija:
-
-- [Dokumentacija](https://linux.die.net/man/1/nano)
-- [Bližnjice](https://www.nano-editor.org/dist/latest/cheatsheet.html)
-
-### Ukaz: `cat`
+### Ukaz: `cat` ([dokumentacija - cat](https://man7.org/linux/man-pages/man1/cat.1.html), [dokumentacija - tac](https://man7.org/linux/man-pages/man1/tac.1.html))
 
 Ukaz `cat` (concatenate) se uporablja za združitev vsebine datotek in izpis na standardni izhod.
 
@@ -349,12 +342,7 @@ cat datoteka.txt
 tac datoteka.txt
 ```
 
-Dokumentacija:
-
-- [Dokumentacija cat](https://man7.org/linux/man-pages/man1/cat.1.html)
-- [Dokumentacija tac](https://man7.org/linux/man-pages/man1/tac.1.html)
-
-### Ukaz: `grep`
+### Ukaz: `grep` ([dokumentacija](https://linux.die.net/man/1/grep))
 
 Z ukazom `grep` izpišemo vrstice v datoteki, ki se ujemajo v našem vzorcu. Velikokrat ga uporabimo v kombinaciji z drugimi ukazi, kjer iščemo po standardnem vhodu namesto po datoteki.
 
@@ -386,11 +374,7 @@ cat datoteka.txt | grep KljucnaBeseda
 grep -E vzore+c datoteka.txt
 ```
 
-Dokumentacija:
-
-- [Dokumentacija](https://linux.die.net/man/1/grep)
-
-### Ukaz: `sudo`
+### Ukaz: `sudo` ([dokumentacija](https://linux.die.net/man/8/sudo))
 
 Z uporabo ukaza `sudo` lahko določen ukaz izvedemo kot, če bi ga izvedel drugi uporabnik ali pa superuser (root).
 
@@ -404,11 +388,7 @@ sudo cat datoteka.txt
 sudo -u user2 -g usergroup2 cat datoteka.txt
 ```
 
-Dokumentacija:
-
-- [Dokumentacija](https://linux.die.net/man/8/sudo)
-
-### Ukaz: `wget`
+### Ukaz: `wget` ([dokumentacija](https://linux.die.net/man/1/wget))
 
 Z ukazom `wget` lahko prenesemo datoteko iz spletnega ali FTP strežnika.
 
@@ -428,17 +408,55 @@ wget --progress=bar https://example.org/File.txt
 wget --connect-timeout=10 https://example.org/File.txt
 ```
 
-Dokumentacija:
+### Ukaz: `apt` ([dokumentacija](https://linux.die.net/man/8/apt-get))
 
-- [Dokumentacija](https://linux.die.net/man/1/wget)
+Ukaz `apt` se uporablja za upravljanje programov na distribuciji Ubuntu (in nekaterih drugih).
 
-### Ukaz: `apt`
+Primeri:
 
-**TODO: Opis + primer (cache search, install, remove, purge, update, upgrade)**
+```bash
+# Preverjanje posodobitev
+sudo apt update
+
+# Posodabljanje programov
+sudo apt upgrade
+
+# Odstranjevanje odvečnih programov (sirot - orphans)
+sudo apt autoremove
+
+# Iskanje programa
+apt search imeprograma
+
+# Nameščanje programa
+sudo apt install imeprograma
+
+# Odstranjevanje programa
+sudo apt remove imeprograma # Odstrani samo program
+sudo apt autoremove imeprograma # Odstrani program in sirote
+sudo apt purge imeprograma # Odstrani program in sistemske konfiguracijske datoteke
+
+# Posodabljanje sistema (preveri za posodobitve, naredi popolno nadgradnjo in odstrani sirote)
+sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
+```
 
 ### Okoljske spremenljivke
 
-**TODO: Opis in seznam pogosto uporabljenih okoljski spremenljiv, primer definicije svojih**
+Okoljske spremenljivke so podobne spremenljivkam v programskih jezikih, njihov namen je da na krajši način zapišemo neko informacijo.
+Eno okoljsko spremenljivko smo že spoznali pri poglavju o `pwd`.
+Za prikaz okoljske spremenljivke lahko uporabimo kar ukaz `echo`: `echo $PWD`, kar nam bo vrnilo pot do trenutnega direktorija.
+Dve pogosti okoljski spremenljivki sta še `$HOME`, ki se razširi v `/home/<uporabniško ime>` in `$PATH`, ki vsebuje poti do vseh izvedljivih programov v sistemu.
+
+Primer:
+```bash
+# Izpis spremenljivke
+echo $HOME
+> /home/vegovec
+
+# Definiranje svoje spremenljivke
+ime=vsebina
+echo $ime
+> vsebina
+```
 
 ## Datoteke in pravice
 
@@ -507,11 +525,7 @@ sudo systemctl stop minecraft
 Če se želimo povezati na serverjevo konzolo zaženemo ukaz `screen -r minecraft`.
 Ker ne želimo ustaviti serverja lahko iz konzole odidemo z ukazom: `Ctrl-a` + `d`.
 
-## Firewall
-
-Dokumentacija:
-
-- [Dokumentacija 1](https://help.ubuntu.com/community/UFW)
+## Firewall ([dokumentacija](https://help.ubuntu.com/community/UFW))
 
 Privzeto ob namestitvi Ubuntu serverja ni nameščenega požarnega zidu, za to ga moramo namestiti sami.
 
