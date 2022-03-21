@@ -513,6 +513,7 @@ Privzeto imajo direktoriji pravice `755`, datoteke pa `644`.
 4. Obiščemo https://www.minecraft.net/en-us/download/server in prenesemo najnovejšo verzijo serverja (preko brskalnika ali pa z `wget`): `sudo wget https://launcher.mojang.com/v1/objects/c8f83c5655308435b3dcf03c06d9fe8740a77469/server.jar`
 5. Zaženemo server: `java -Xmx1024M -Xms1024M -jar server.jar nogui`
 6. Potrdimo strinjanje z EULA: `echo "eula=true" | tee eula.txt`
+7. Server nastavimo na offline način
 
 Ker želimo server avtomatsko pognati ob ponovnem zagonu moramo za to uporabiti `systemd` storitve.
 
@@ -595,3 +596,16 @@ sudo ufw enable
 ```
 
 Konfiguracijske datoteke se nahajajo na `/etc/ufw`.
+
+## Povezovanje na Minecraft server
+
+Ker smo server nastavili na offline način, se lahko nanj povežemo tudi brez plačljivega Minecraft računa, kar bomo storili s pomočjo aplikacije [TLauncher](https://tlauncher.org/en/).
+
+| 1. Obišči [TLauncher spletno stran](https://tlauncher.org/en/), prenesi aplikacijo in jo zaženi |
+|:-----------------------------------------------------------------------------------------------:|
+| ![Screenshot from 2022-03-21 18-32-52](https://user-images.githubusercontent.com/46302511/159335389-ddc09e64-f641-4ada-ad21-f6b003ef1049.png) |
+| ![Screenshot from 2022-03-21 18-33-06](https://user-images.githubusercontent.com/46302511/159335431-5276e02f-879f-4e56-8a97-152c0ad925ff.png) |
+| 2. Vpiši želeno uporabniško ime (ni važno katero) in pritisni na gumb **Install** |
+| ![Screenshot from 2022-03-21 18-34-07](https://user-images.githubusercontent.com/46302511/159335558-77c7ebff-9d97-4fb3-bd67-3f32f7027c45.png) |
+
+Ko se bo Minecraft uspešno prenesel se bo avtomatsko zagnal, od tam naprej pa se verjetno že znate povezati na server.
