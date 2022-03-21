@@ -74,7 +74,12 @@ Poznamo 2 vrsti lupin:
 
 V ukazno vrstico vnašamo ukaze, ki se nato izvedejo.
 
-Ukazna vrstica se začne s **pozivnikom (prompt)**  `student@stroj:~>`, kjer `student` predstavlja ime uporabnika (ki je odprl lupino), `stroj` predstavlja ime naprave, `~` pa predstavlja pot, kjer se trenutno nahajamo. (`~` je okrajšava za `/home/<ime-uporabnika>`)
+Ukazna vrstica se začne s **pozivnikom (prompt)**  `student@stroj:~>`, kjer `student` predstavlja ime uporabnika (ki je odprl lupino), `stroj` predstavlja ime naprave, `~` pa predstavlja pot, kjer se trenutno nahajamo (`~` je okrajšava za `/home/<ime-uporabnika>`).
+
+**Pogosto za prikaz vnašanja ukaza v ukazno vrstico pred ukazom vidimo kar skrajšan prompt in sicer simbol `>` ali `$`.
+Enako bo v tem dokumentu. Se pravi, če vidimo ukaz ki se začne s simbolom `>`, pomeni, da ga vnesemo v ukazno vrstico,
+simbol `#` predstavlja komentar, besedilo brez simbola pa predstavlja odgovor, ki ga vrne ukaz.
+Ko ukaz vnesemo v ukazno vrstico, simbola `>` ne napišemo, ta je tukaj le za ilustracijo primera.**
 
 Ukazne vrstice lahko avtomatično dopolnjujemo s pomočjo pritiskom tipke *Tab*.
 
@@ -99,10 +104,10 @@ Z ukazom `echo` izpišemo podane parametre na zaslon. Z stikali lahko spremenimo
 
 ``` bash
 # Primer izpisa besedila
-echo "Besedilo"
+> echo "Besedilo"
 
 # Primer izpisa brez končnega prehoda v novo vrstico
-echo -n "Brez nove vrstice"
+> echo -n "Brez nove vrstice"
 ```
 
 ### Ukaz: `man`
@@ -134,23 +139,22 @@ Primeri ukazov:
 
 ``` bash
 # Izpis doumentacije za ukaz printf
-man printf
+> man printf
 
 # Izpis določenega poglavja dokumentacije
-man 2 intro
+> man 2 intro
 
 # Izpis vseh dokumentacij, ki so na voljo za ukaz
-man -a intro
+> man -a intro
 
 # Iskanje ključne besede po vseh dokumentacijah
-man -k cd
+> man -k cd
 
 # Izpis lokacije, kjer se nahaja dokumentacija
-man -w ls
+> man -w ls
 
 # Prikaz dokumentacije s tem, da pri imenu upošteva velikost črk
-man -I printf
-
+> man -I printf
 ```
 
 ![man man](https://user-images.githubusercontent.com/46302511/159133118-7cbe39ee-5e4f-449a-a303-0b500819a214.png)
@@ -213,13 +217,13 @@ Primer le nekaterih:
 
 ``` bash
 # Izpis vsebine mape v kateri se trenutno nahajamo
-ls
+> ls
 
 # Izpis vseh datotek z dodatnimi informacijimi napisanimi na lepši način
-ls -lah
+> ls -lah
 
 # Izpis druge mape
-ls /etc
+> ls /etc
 ```
 
 ### Ukaz: `cd` ([dokumentacija](https://man7.org/linux/man-pages/man1/cd.1p.html), [primeri uporabe](https://www.tecmint.com/cd-command-in-linux/))
@@ -246,16 +250,16 @@ Primeri:
 
 ``` bash
 # Premik v korensko mapo
-cd /
+> cd /
 
 # Premik v domačo mapo trenutnega uporabnika
-cd ~
+> cd ~
 
 # Premik eno mapo višje
-cd ..
+> cd ..
 
 # Premik v sosednjo mapo
-cd ../sosednjaMapa
+> cd ../sosednjaMapa
 ```
 
 Ker je ukaz ugrajen v samo lupino, se do njegove dokumentacije pride z ukazom `man builtins`.
@@ -268,7 +272,7 @@ Primeri:
 
 ``` bash
 # Ustvarimo datoteko
-touch datoteka1
+> touch datoteka1
 ```
 
 ### Ukaz: `tree` ([dokumentacija](https://linux.die.net/man/1/tree))
@@ -279,32 +283,32 @@ Primeri:
 
 ``` bash
 # Preprost izpis
-tree mapa
+> tree mapa
 
 # Izpis tudi skritih datotek/map
-tree -a mapa
+> tree -a mapa
 
 # Izpis zgolj map
-tree -d mapa
+> tree -d mapa
 
 # Izpis celotne (relativne) poti do datotek
-tree -f mapa
+> tree -f mapa
 
 # Izpis brez zamikov in drevesne strukture
-tree -i mapa
+> tree -i mapa
 
 # Izpis datotek in map, ki ustrezajo vzorcu
-tree -P vzorec mapa
+> tree -P vzorec mapa
 
 # Izpis pravic poleg imen datotek in map
-tree -p mapa
+> tree -p mapa
 
 # Izpis z velikostjo datotek
-tree -s mapa
-tree -h mapa # Bolj pregleden izpis
+> tree -s mapa
+> tree -h mapa # Bolj pregleden izpis
 
 # Izpis do določene globine
-tree -L globina mapa
+> tree -L globina mapa
 ```
 
 ### Ukaz: `nano` ([dokumentacija](https://linux.die.net/man/1/nano), [bližnjice](https://www.nano-editor.org/dist/latest/cheatsheet.html))
@@ -325,7 +329,7 @@ Primeri:
 
 ``` bash
 # Uredimo vsebino datoteke
-nano datoteka.txt
+> nano datoteka.txt
 ```
 
 ### Ukaz: `cat` ([dokumentacija - cat](https://man7.org/linux/man-pages/man1/cat.1.html), [dokumentacija - tac](https://man7.org/linux/man-pages/man1/tac.1.html))
@@ -336,10 +340,10 @@ Primeri;
 
 ``` bash
 # Izpis vsebine datoteke
-cat datoteka.txt
+> cat datoteka.txt
 
 # Izpis datoteke v obratnem vrstnem redu vrstic
-tac datoteka.txt
+> tac datoteka.txt
 ```
 
 ### Ukaz: `grep` ([dokumentacija](https://linux.die.net/man/1/grep))
@@ -365,13 +369,13 @@ Primeri:
 
 ``` bash
 # Iskanje vrstic v datoteki, ki vsebujejo ključno besedo
-grep KljucnaBeseda datoteka.txt
+> grep KljucnaBeseda datoteka.txt
 
 # Kombinacija z ukazom cat
-cat datoteka.txt | grep KljucnaBeseda
+> cat datoteka.txt | grep KljucnaBeseda
 
 # Iskanje vzorca v datiteju
-grep -E vzore+c datoteka.txt
+> grep -E vzore+c datoteka.txt
 ```
 
 ### Ukaz: `sudo` ([dokumentacija](https://linux.die.net/man/8/sudo))
@@ -382,10 +386,10 @@ Primeri:
 
 ``` bash
 # Poženemo ukaz kot administrator
-sudo cat datoteka.txt
+> sudo cat datoteka.txt
 
 # Poženemo ukaz kot drug uporabnik
-sudo -u user2 -g usergroup2 cat datoteka.txt
+> sudo -u user2 -g usergroup2 cat datoteka.txt
 ```
 
 ### Ukaz: `wget` ([dokumentacija](https://linux.die.net/man/1/wget))
@@ -396,16 +400,16 @@ Primeri:
 
 ``` bash
 # Prenos datoteke s spletnega strežnika
-wget https://example.org/File.txt
+> wget https://example.org/File.txt
 
 # Prenos, kjer določimo ime ciljne datoteke
-wget -O File.txt https://example.org/File.txt
+> wget -O File.txt https://example.org/File.txt
 
 # Izpis statusa prenosa
-wget --progress=bar https://example.org/File.txt
+> wget --progress=bar https://example.org/File.txt
 
 # Timeout
-wget --connect-timeout=10 https://example.org/File.txt
+> wget --connect-timeout=10 https://example.org/File.txt
 ```
 
 ### Ukaz: `apt` ([dokumentacija](https://linux.die.net/man/8/apt-get))
@@ -416,28 +420,30 @@ Primeri:
 
 ```bash
 # Preverjanje posodobitev
-sudo apt update
+> sudo apt update
 
 # Posodabljanje programov
-sudo apt upgrade
+> sudo apt upgrade
 
 # Odstranjevanje odvečnih programov (sirot - orphans)
-sudo apt autoremove
+> sudo apt autoremove
 
 # Iskanje programa
-apt search imeprograma
+> apt search imeprograma
 
 # Nameščanje programa
-sudo apt install imeprograma
+> sudo apt install imeprograma
 
 # Odstranjevanje programa
-sudo apt remove imeprograma # Odstrani samo program
-sudo apt autoremove imeprograma # Odstrani program in sirote
-sudo apt purge imeprograma # Odstrani program in sistemske konfiguracijske datoteke
+> sudo apt remove imeprograma # Odstrani samo program
+> sudo apt autoremove imeprograma # Odstrani program in sirote
+> sudo apt purge imeprograma # Odstrani program in sistemske konfiguracijske datoteke
 
 # Posodabljanje sistema (preveri za posodobitve, naredi popolno nadgradnjo in odstrani sirote)
-sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
+> sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
 ```
+
+Za vajo uporabimo zadnji primer, da posodobimo sistem in na koncu po potrebi ponovno zaženemo VM (ukaz `reboot`).
 
 ### Okoljske spremenljivke
 
@@ -449,18 +455,57 @@ Dve pogosti okoljski spremenljivki sta še `$HOME`, ki se razširi v `/home/<upo
 Primer:
 ```bash
 # Izpis spremenljivke
-echo $HOME
-> /home/vegovec
+> echo $HOME
+/home/vegovec
 
 # Definiranje svoje spremenljivke
-ime=vsebina
-echo $ime
-> vsebina
+> ime=vsebina
+> echo $ime
+vsebina
 ```
 
 ## Datoteke in pravice
 
-**TODO: Opis (user,group, others), pravice (r,w,x)**
+Pogosto želimo dostop do nekaterih datotek ali direktorijev omejiti na določene uporabnike.
+Privzeto ima vsak uporabnik na Linux distribucijah dostop samo do svojih datotek, datotek drugih uporabnikov pa ne more videti.
+
+Obstajajo tri vrste pravic: **bralne** (`r` - read), **pisalne** (`w` - write) in **izvajalne** (`x` - execte za datoteke, `d` za direktorije),
+vsaki datoteki (ali direktoriju) pa lahko določimo te pravice za tri skupine uporabnikov:
+***lastnik** (`u` - user), **skupina** (`g` - group) in **ostali** (`o` - others).
+
+Če zaženemo ukaz `ls -lah` v nekem direktoriju bomo dobili nekaj takega:
+```
+erazemk@t540p ~> ls -lah
+total 0
+drwx------.  5 erazemk erazemk 160 mar 21 19:27 .
+drwxrwxrwt. 25 root    root    580 mar 21 19:27 ..
+-rw-r--r--.  1 erazemk erazemk   0 mar 21 19:27 datoteka1
+-rw-r--r--.  1 erazemk erazemk   0 mar 21 19:27 datoteka2
+-rwxr-xr-x.  1 erazemk erazemk   0 mar 21 19:27 datoteka3
+drwxr-xr-x.  2 erazemk erazemk  40 mar 21 19:27 mapa1
+drwxr-xr-x.  2 erazemk erazemk  40 mar 21 19:27 mapa2
+drwxr-xr-x.  2 erazemk erazemk  40 mar 21 19:27 mapa3
+```
+
+Vidimo lahko, da ima vsaka datoteka kot prvi stolpec zaporedje znakov (npr. `-rw-r--r--.`).
+Le-te si lahko predstavljamo kot stolpce v tabeli.
+
+Poglejmo si za primer vrstico datoteke 1.
+
+Znak 1 (`-`) pove, da datoteka ni direktorij (so pa direktoriji vse mape).
+
+Znaki 2-4 (`rw-`) se nanašajo na lastnika (prvi `erazemk`) in povejo, da ima ta bralne (`r`) in pisalne (`w`), ne pa izvajalnih (`-`) pravic
+(datoteko 3 pa lahko tudi izvaja).
+
+Znaki 5-7 (`r--`) se nanašajo na skupino (drugi `erazemk`), in povejo, da lahko ta datoteko samo bere.
+
+Znaki 8-10 (`r--`) se nanašajo na ostale uporabnike in povejo, da lahko tudi te datoteko samo berejo.
+
+Znak 11 (`.`) je uporabljen za druge lastnosti, v katere se ne bomo spuščali.
+
+Vidimo lahko, da imajo vse tri mape omogočeno izvajanje za vse tri skupine uporabnikov.
+V Linux sistemih je odpiranje mape ekvivalentno izvajanju, zato moramo direktorijem nujno pustiti izvajalne pravice,
+če jih želimo odpreti.
 
 ### Ukaz: `whoami` ([dokumentacija](https://linux.die.net/man/1/whoami))
 
@@ -468,8 +513,8 @@ Ukaz `whoami` uporabimo za izpis uporabniškega imena trenutnega uporabnika.
 
 Primer:
 ```bash
-whoami
-> vegovec
+> whoami
+vegovec
 ```
 
 ### Ukaz: `chown` ([dokumentacija](https://linux.die.net/man/1/chown))
@@ -480,10 +525,10 @@ Spremenimo lahko tako lastnika kot tudi skupino.
 Primeri:
 ```bash
 # Dodeljevanje lastništva datoteke imedatoteke uporabniku in skupini vegovec
-chown vegovec:vegovec imedatoteke
+> chown vegovec:vegovec imedatoteke
 
 # Dodeljevanje lastništva direktorija in vseh poddirektorijev
-chown -R vegovec:vegovec direktorij
+> chown -R vegovec:vegovec direktorij
 ```
 
 **TODO: /etc/passwd,/etc/shadow,/etc/group**
@@ -492,15 +537,32 @@ chown -R vegovec:vegovec direktorij
 
 Ukaz `chmod` se uporablja za spreminjanje pravic dostopa do datoteke ali direktorija.
 
+Poleg določanja pravic z uporabo črk, lahko na krajši način določimo pravice za vse skupine uporabnikov za datoteko s števili.
+Tako skrajšamo zapis na le tri števke, prva za lastnika, druga za skupino, tretja pa za ostale uporabnike.
+Da izračunamo katere pravice bi dodelili datoteki moramo vrste pravic sešteti.
+Branje je vredno 4, pisanje 2 in izvajanje 1.
+
+Tako na primer za branje in pisanje dobimo število 6 (4 + 2), za branje, pisanje in izvajanje 7 (4 + 2 + 1),
+za pisanje in izvajanje 3 (2 + 1) itd.
+
+Da bi nastavili pravice za določene skupine uporabnikov to storimo tako, da jih zapišemo zaporedno: `644`.
+To pomeni da bo lastnik lahko datoteko bral in vanjo pisal (`6`), skupina in ostali pa jo bojo lahko samo brali (`4`).
+
 ```bash
+# Nastavi pravice izvajanja za lastnika datoteke
+> chmod u+x imedatoteke # + pomeni dodaj, - pa odvzemi
+
+# Odvzemi pravico izvajanja za skupino datoteke
+> chmod g-x imedatoteke
+
 # Nastavi pravice branja in pisanja datoteke lastniku in skupini, a samo branja ostalim
-chmod 644 imedatoteke
+> chmod 644 imedatoteke
 
 # Nastavi pravice izvajanja, branja in pisanja lastniku in skupini, a samo branja in izvajanja ostalim
-chmod 755 imedatoteke
+> chmod 755 imedatoteke
 
 # Nastavi pravice na direktoriju in vseh poddirektorijih
-chmod -R 755 mapa # <-- PAZI! - če direktorij nima pravice izvajanja, ga ne moremo odpreti
+> chmod -R 755 mapa # <-- PAZI! - če direktorij nima pravice izvajanja, ga ne moremo odpreti
 ```
 
 Privzeto imajo direktoriji pravice `755`, datoteke pa `644`.
@@ -519,7 +581,11 @@ Ker želimo server avtomatsko pognati ob ponovnem zagonu moramo za to uporabiti 
 
 ### Konfiguracija strežnika kot storitve: systemd
 
-**TODO: Dodaj splošen info o systemd**
+Systemd (system daemon) je administratorsko orodje, ki skrbi za izvajanje storitev na večini Linux distribucij.
+Storitve lahko zažene, ustavi ali ponovno zažene, ponuja pa še množico drugih možnosti.
+Zaradi kompleksnosti sistema se vanj ne bomo spuščali.
+
+Vedeti moramo le, da če želimo upravljati Minecraft strežnik s pomočjo Systemd (kar je koristno, ker se lahko avtomatsko zažene ko ponovno zaženemo VM), moramo zanj ustvariti konfiguracijsko datoteko, ki jo Systemd zna brati.
 
 Ustvarimo datoteko `minecraft.service`: `sudo nano /etc/systemd/system/minecraft.service`
 
@@ -541,17 +607,17 @@ ExecStop=/usr/bin/screen -S minecraft -p 0 -X stuff "`printf \"stop\r\"`"
 WantedBy=multi-user.target
 ```
 
-S strežnikom upravljamo s sledečimi ukazi:
+Ko datoteko shranimo, lahko s strežnikom upravljamo s sledečimi ukazi:
 
 ``` bash
 # Omogočimo zagon strežnika ob vklopu naprave (naredimo ob namestitvi)
-sudo systemctl enable minecraft
+> sudo systemctl enable minecraft
 
 # Zaženemo Minecraft strežnik
-sudo systemctl start minecraft
+> sudo systemctl start minecraft
 
 # Ustavimo Minecraft strežnik
-sudo systemctl stop minecraft
+> sudo systemctl stop minecraft
 ```
 
 Če se želimo povezati na serverjevo konzolo zaženemo ukaz `screen -r minecraft`.
@@ -567,32 +633,32 @@ Da zaščitimo naš strežnik bomo uporabili **ufw** (Uncomplicated firewall), s
 
 ``` bash
 # Namestitev
-sudo apt install ufw
+> sudo apt install ufw
 
 # Pregled statusa
-sudo ufw status verbose
+> sudo ufw status verbose
 # icoming: promet od zunaj, ki dostopa do aplikacij
 # routed: promet, ki potuje čez napravo do "drugih naprav" (naprava se obnaša kot usmerjevalnik)
 # outgoing: promet, k ga ustvarjajo aplikacije na napravi, ko dostopajo do spleta
 
 # Odpremo port za MineCraft server
-sudo ufw allow 25565/tcp
+> sudo ufw allow 25565/tcp
 
 # Primer: Omogoči tcp in udp
-sudo ufw allow 53
+> sudo ufw allow 53
 
 # Primer: Omogoči promet določeni storitvi (/etc/services)
-sudo ufw allow SERVICENAME
+> sudo ufw allow SERVICENAME
 
 # Primer: Onemogoči promet
-sudo ufw deny 53
-sudo ufw deny 53/udp
+> sudo ufw deny 53
+> sudo ufw deny 53/udp
 
 # Pregled statusa
-sudo ufw status verbose
+> sudo ufw status verbose
 
 # Omogoči požarni zid
-sudo ufw enable
+> sudo ufw enable
 ```
 
 Konfiguracijske datoteke se nahajajo na `/etc/ufw`.
