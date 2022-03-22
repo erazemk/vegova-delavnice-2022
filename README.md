@@ -614,6 +614,9 @@ Ko datoteko shranimo, lahko s strežnikom upravljamo s sledečimi ukazi:
 # Zaženemo Minecraft strežnik
 > sudo systemctl start minecraft
 
+# Preverimo stanje strežnika
+> sudo systemctl status minecraft
+
 # Ustavimo Minecraft strežnik
 > sudo systemctl stop minecraft
 ```
