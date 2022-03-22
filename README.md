@@ -617,9 +617,6 @@ Ko datoteko shranimo, lahko s strežnikom upravljamo s sledečimi ukazi:
 > sudo systemctl status minecraft
 ```
 
-Če se želimo povezati na serverjevo konzolo zaženemo ukaz `screen -r minecraft`.
-Ker ne želimo ustaviti serverja lahko iz konzole odidemo z ukazom: `Ctrl-a` + `d`.
-
 ## Požarni zid `ufw` ([dokumentacija](https://help.ubuntu.com/community/UFW))
 
 Privzeto ob namestitvi Ubuntu serverja ni nameščenega požarnega zidu, za to ga moramo namestiti sami.
