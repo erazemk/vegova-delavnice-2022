@@ -567,7 +567,7 @@ Privzeto imajo direktoriji pravice `755`, datoteke pa `644`.
 
 ## Namestitev Minecraft strežnika
 
-1. Namestimo Javo: `sudo apt install -y openjdk-11-jre`
+1. Namestimo Javo: `sudo apt install -y openjdk-17-jre-headless`
 2. Ustvarimo novega uporabnika: `sudo useradd -m -r -d /opt/minecraft minecraft`
 3. Premaknemo se v `/opt/minecraft`: `cd /opt/minecraft`
 4. Obiščemo [https://www.minecraft.net/en-us/download/server](https://www.minecraft.net/en-us/download/server) in prenesemo najnovejšo verzijo serverja (preko brskalnika ali pa z `wget`): `sudo wget https://launcher.mojang.com/v1/objects/c8f83c5655308435b3dcf03c06d9fe8740a77469/server.jar`
