@@ -570,7 +570,7 @@ Privzeto imajo direktoriji pravice `755`, datoteke pa `644`.
 1. Namestimo Javo: `sudo apt install -y openjdk-17-jre-headless`
 2. Ustvarimo novega uporabnika: `sudo useradd -m -r -d /opt/minecraft minecraft`
 3. Premaknemo se v `/opt/minecraft`: `cd /opt/minecraft`
-4. Obiščemo [https://www.minecraft.net/en-us/download/server](https://www.minecraft.net/en-us/download/server) in prenesemo najnovejšo verzijo serverja (preko brskalnika ali pa z `wget`): `sudo -u minecraft -g minecraft wget https://launcher.mojang.com/v1/objects/c8f83c5655308435b3dcf03c06d9fe8740a77469/server.jar`
+4. Obiščemo [https://www.minecraft.net/en-us/download/server](https://www.minecraft.net/en-us/download/server) in prenesemo najnovejšo verzijo serverja (preko brskalnika ali pa z `wget`): `sudo -u minecraft -g minecraft wget http://s.dagarin.si/mc-server`
 5. Zaženemo server, da zgeneriramo začetno konfiguracijo: `sudo -u minecraft -g minecraft java -Xmx2048M -Xms2048M -jar server.jar nogui`
 6. Potrdimo strinjanje z EULA: `sudo nano eula.txt` (`eula=true`)
 7. Server nastavimo na offline način: `sudo nano server.properties` (`online-mode=false`)
