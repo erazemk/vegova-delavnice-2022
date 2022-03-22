@@ -529,7 +529,7 @@ Primeri:
 > chown -R vegovec:vegovec direktorij
 ```
 
-**TODO: /etc/passwd,/etc/shadow,/etc/group**
+Za vajo lahko pogledamo vsebino datotek `/etc/passwd`, `/etc/group` in `/etc/shadow`.
 
 ### Ukaz: `chmod` ([dokumentacija](https://linux.die.net/man/1/chmod))
 
