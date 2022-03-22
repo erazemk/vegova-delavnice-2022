@@ -1,5 +1,3 @@
-# Vegova - delavnica Linux + Minecraft
-
 ## Virtualka
 
 Da si skrajšamo čas priprave je na voljo [Ubuntu Server 20.04](https://drive.google.com/file/d/1uXuYXMLVn9_eMHHl0PMdLa4Gml0fesxc/view?usp=sharing) VM slika, ki jo bomo uvozili v VirtualBox.
